@@ -10,9 +10,9 @@ namespace DraftingMod.Utility
         {
             string listStr = peltType switch
             {
-                "Hare" => DraftingMod.extraHareChance.Value,
-                "Wolve" => DraftingMod.extraWolveChance.Value,
-                "Gold" => DraftingMod.extraGoldChance.Value,
+                "Hare" => ChanceConfigs.extraHareChance.Value,
+                "Wolve" => ChanceConfigs.extraWolveChance.Value,
+                "Gold" => ChanceConfigs.extraGoldChance.Value,
                 _ => ""
             };
 

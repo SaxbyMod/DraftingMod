@@ -24,42 +24,18 @@ namespace DraftingMod
         // Declare Harmony here for future Harmony patches. You'll use Harmony to patch the game's code outside of the scope of the API.
         public static Harmony harmony = new(PluginGuid);
         
-        // Config Vars
-        public static ConfigEntry<int> extraHares;
-        public static ConfigEntry<string> extraHareChance;
-        public static ConfigEntry<int> extraWolves;
-        public static ConfigEntry<string> extraWolveChance;
-        public static ConfigEntry<int> extraGolds;
-        public static ConfigEntry<string> extraGoldChance;
-        
         public void Awake()
         {
-            extraHares = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
-                "How many extra hares for the entree?",
-                2,
-                "How many extra hares should be given for the entree?");
-            extraHareChance = Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
-                "What should the chances for each hare entree be?",
-                "30%, 10%",
-                "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
-            extraWolves = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
-                "How many extra wolves for the entree?",
-                1,
-                "How many extra wolves should be given for the entree?");
-            extraWolveChance = Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
-                "What should the chances for each wolve entree be?",
-                "20%",
-                "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
-            extraGolds = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
-                "How many extra golds for the entree?",
-                1,
-                "How many extra golds should be given for the entree?");
-            extraGoldChance = Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
-                "What should the chances for each gold entree be?",
-                "5%",
-                "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
+            CountConfigs.Config = Config;
+            CountConfigs.Init();
+            ChanceConfigs.Config = Config;
+            ChanceConfigs.Init();
             
             harmony.PatchAll(typeof(RunstatePatches));
+            harmony.PatchAll(typeof(DeckInfoPatches));
+            harmony.PatchAll(typeof(MapGeneratorPatches));
+            harmony.PatchAll(typeof(AscensionSaveDataPatches));
+            harmony.PatchAll(typeof(AscensionStartScreenPatches));
             Logger.LogMessage($"{PluginGuid}: Loaded Mod: {PluginName} - {PluginVersion}");
         }
     }
