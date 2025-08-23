@@ -7,7 +7,7 @@
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>Latest</LangVersion>
-    <RootNamespace>SmallTweak_Hydra</RootNamespace>
+    <RootNamespace>DraftingMod</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
