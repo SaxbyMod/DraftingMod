@@ -34,12 +34,6 @@
 			<Publicize>true</Publicize>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="InscryptionAPI">
-		  <HintPath>Libs\InscryptionAPI.dll</HintPath>
-		</Reference>
-		<Reference Include="InscryptionCommunityPatch">
-		  <HintPath>Libs\InscryptionCommunityPatch.dll</HintPath>
-		</Reference>
 		<Reference Include="Sirenix.Serialization">
 			<HintPath>lib\Sirenix.Serialization.dll</HintPath>
 			<Publicize>true</Publicize>

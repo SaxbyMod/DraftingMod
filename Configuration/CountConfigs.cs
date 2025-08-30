@@ -1,7 +1,7 @@
 ﻿using BepInEx.Configuration;
-using DraftingMod.Compat_Layer;
+using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
 
-namespace DraftingMod
+namespace DraftingMod.Configuration
 {
     public static class CountConfigs
     {
@@ -32,9 +32,8 @@ namespace DraftingMod
             
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsPrefix))
             {
-                TribalPeltsChanceConfigs.Config = Config;
-                DraftingMod.Log.LogMessage("Do I see The other DLL? I do, I do see the other DLL! (Tribal Pelts)");
-                TribalPeltsChanceConfigs.Init();
+                Compat_Layer.Tribal_Pelts.CountConfigs.Config = Config;
+                Compat_Layer.Tribal_Pelts.CountConfigs.Init();
             }
         }
     }

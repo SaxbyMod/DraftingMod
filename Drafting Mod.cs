@@ -1,6 +1,7 @@
 using BepInEx;
 using BepInEx.Logging;
 using DraftingMod.PATCHES;
+using DraftingMod.Configuration;
 using HarmonyLib;
 
 namespace DraftingMod
@@ -10,14 +11,16 @@ namespace DraftingMod
     [BepInDependency("creator.TribalPelts", BepInDependency.DependencyFlags.SoftDependency)]
     public class DraftingMod : BaseUnityPlugin
     {
-        // --------------------------------------------------------------------------------------------------------------------------------------------------
-
-        // These are variables that exist everywhere in the entire class.
         public const string PluginGuid = "creator.inscryption.DraftingMod";
         public const string PluginName = "Drafting Mod";
         public const string PluginVersion = "1.1.0";
         public const string PluginPrefix = "Drafting_Mod";
+        
         public const string TribalPeltsPrefix = "creator.TribalPelts";
+        public const string NGUID = "nevernamed.inscryption.sigils";
+        public const string VGUID = "extraVoid.inscryption.VerminTribe";
+        public const string LGUID = "Lily.BOT";
+        public const string MGUID = "mushroom.pelts";
 
         // Define a Manual Log Source
         public static ManualLogSource Log = new ManualLogSource(PluginName);

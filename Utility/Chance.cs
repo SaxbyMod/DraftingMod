@@ -1,7 +1,9 @@
-﻿using DraftingMod.Compat_Layer;
-using System;
+﻿using DraftingMod.Configuration;
+using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
+using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions;
 using System.Collections.Generic;
 using System.Linq;
+using ChanceConfigs = DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.ChanceConfigs;
 
 namespace DraftingMod.Utility
 {
@@ -11,15 +13,21 @@ namespace DraftingMod.Utility
         {
             string listStr = peltType switch
             {
-                "Hare" => ChanceConfigs.extraHareChance.Value,
-                "Wolve" => ChanceConfigs.extraWolveChance.Value,
-                "Gold" => ChanceConfigs.extraGoldChance.Value,
-                "Raven" => TribalPeltsChanceConfigs.extraRavenEpidermisesChance.Value,
-                "Coyote" => TribalPeltsChanceConfigs.extraCoyotePeltChance.Value,
-                "Moth" => TribalPeltsChanceConfigs.extraMothMoltChance.Value,
-                "Deer" => TribalPeltsChanceConfigs.extraDeerPeltChance.Value,
-                "Crocadile" => TribalPeltsChanceConfigs.extraCrocadileHideChance.Value,
-                _ => ""
+                "Hare" => Configuration.ChanceConfigs.extraHareChance.Value,
+                "Wolve" => Configuration.ChanceConfigs.extraWolveChance.Value,
+                "Gold" => Configuration.ChanceConfigs.extraGoldChance.Value,
+                "Raven" => ChanceConfigs.extraRavenEpidermisesChance.Value,
+                "Coyote" => ChanceConfigs.extraCoyotePeltChance.Value,
+                "Moth" => ChanceConfigs.extraMothMoltChance.Value,
+                "Deer" => ChanceConfigs.extraDeerPeltChance.Value,
+                "Crocadile" => ChanceConfigs.extraCrocadileHideChance.Value,
+                "Beaver" => Beaver.extraBeaverPeltChance.Value,
+                "Lobster" => Nevernamed.extraLobsterPeltChance.Value,
+                "Spider" => Nevernamed.extraSpiderSkinChance.Value,
+                "Human" => Bundle.extraHumanRemainsChance.Value,
+                "Shark" => Bundle.extraSharkLeatherChance.Value,
+                "Tiger" => Bundle.extraTigerPeltChance.Value,
+                _ => "",
             };
 
             List<float> chances = new List<float>();

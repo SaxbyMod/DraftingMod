@@ -1,5 +1,6 @@
 ﻿using DiskCardGame;
 using System.Collections.Generic;
+using DraftingMod.Configuration;
 
 namespace DraftingMod.Utility
 {
@@ -60,7 +61,7 @@ namespace DraftingMod.Utility
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsPrefix))
             {
 	            DraftingMod.Log.LogMessage("Do I see The other DLL? I do, I do see the other DLL! (Tribal Pelts)");
-	            Compat_Layer.TribalPeltsAdditionalPelts.TribalPelts(deckInfo);
+	            Compat_Layer.Tribal_Pelts.AdditionalPelts.TribalPelts(deckInfo);
             }
             
             return deckInfo;

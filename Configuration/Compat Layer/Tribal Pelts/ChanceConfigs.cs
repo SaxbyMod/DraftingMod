@@ -1,8 +1,9 @@
 ﻿using BepInEx.Configuration;
+using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions;
 
-namespace DraftingMod.Compat_Layer
+namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts
 {
-	public class TribalPeltsChanceConfigs
+	public class ChanceConfigs
 	{
 		public static ConfigFile Config;
 		
@@ -35,6 +36,23 @@ namespace DraftingMod.Compat_Layer
                 "What should the chances for each crocadile entree be?",
                 "25%",
                 "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
+            
+            // Handle Tribal Pelts Extensions
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NGUID) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.LGUID) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.VGUID))
+            {
+	            Beaver.Config = Config;
+	            Beaver.BeaverExtensionChance();
+            }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NGUID))
+            {
+	            Nevernamed.Config = Config;
+	            Nevernamed.NevernamedExtensionChance();
+            }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.LGUID))
+            {
+	            Bundle.Config = Config;
+	            Bundle.BundleExtensionChance();
+            }
 		}
 	}
 }

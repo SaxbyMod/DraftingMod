@@ -1,8 +1,9 @@
 ﻿using BepInEx.Configuration;
+using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions;
 
-namespace DraftingMod.Compat_Layer
+namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts
 {
-	public class TribalPeltsCountConfigs
+	public class CountConfigs
 	{
 		public static ConfigFile Config;
 		
@@ -35,6 +36,23 @@ namespace DraftingMod.Compat_Layer
 				"How many extra crocadiles for the entree?",
 				1,
 				"How many extra crocadiles should be given for the entree?");
+			
+			// Handle Tribal Pelts Extensions
+			if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NGUID) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.LGUID) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.VGUID))
+			{
+				Beaver.Config = Config;
+				Beaver.BeaverExtensionCount();
+			}
+			if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NGUID))
+			{
+				Nevernamed.Config = Config;
+				Nevernamed.NevernamedExtensionCount();
+			}
+			if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.LGUID))
+			{
+				Bundle.Config = Config;
+				Bundle.BundleExtensionCount();
+			}
 		}
 	}
 }
