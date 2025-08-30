@@ -1,4 +1,5 @@
 ﻿using BepInEx.Configuration;
+using DraftingMod.Compat_Layer;
 
 namespace DraftingMod
 {
@@ -13,6 +14,7 @@ namespace DraftingMod
         
         public static void Init()
         {
+            // Base
             extraHares = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
                 "How many extra hares for the entree?",
                 2,
@@ -25,6 +27,15 @@ namespace DraftingMod
                 "How many extra golds for the entree?",
                 1,
                 "How many extra golds should be given for the entree?");
+            
+            // Compatibility Sections
+            
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsPrefix))
+            {
+                TribalPeltsChanceConfigs.Config = Config;
+                DraftingMod.Log.LogMessage("Do I see The other DLL? I do, I do see the other DLL! (Tribal Pelts)");
+                TribalPeltsChanceConfigs.Init();
+            }
         }
     }
 }

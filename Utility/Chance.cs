@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DraftingMod.Compat_Layer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,6 +14,11 @@ namespace DraftingMod.Utility
                 "Hare" => ChanceConfigs.extraHareChance.Value,
                 "Wolve" => ChanceConfigs.extraWolveChance.Value,
                 "Gold" => ChanceConfigs.extraGoldChance.Value,
+                "Raven" => TribalPeltsChanceConfigs.extraRavenEpidermisesChance.Value,
+                "Coyote" => TribalPeltsChanceConfigs.extraCoyotePeltChance.Value,
+                "Moth" => TribalPeltsChanceConfigs.extraMothMoltChance.Value,
+                "Deer" => TribalPeltsChanceConfigs.extraDeerPeltChance.Value,
+                "Crocadile" => TribalPeltsChanceConfigs.extraCrocadileHideChance.Value,
                 _ => ""
             };
 
