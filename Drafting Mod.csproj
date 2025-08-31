@@ -40,4 +40,10 @@
 			<Private>false</Private>
 		</Reference>
 	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Configuration\Compat Layer\Temple Pelts\Extensions\" />
+	  <Folder Include="Utility\Compat Layer\Temple Pelts\Extensions\" />
+	</ItemGroup>
 </Project>

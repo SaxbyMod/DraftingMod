@@ -1,5 +1,5 @@
 ﻿using BepInEx.Configuration;
-using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
+using DraftingMod.Utility;
 
 namespace DraftingMod.Configuration
 {
@@ -15,25 +15,20 @@ namespace DraftingMod.Configuration
         public static void Init()
         {
             // Base
-            extraHares = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
-                "How many extra hares for the entree?",
-                2,
-                "How many extra hares should be given for the entree?");
-            extraWolves = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
-                "How many extra wolves for the entree?",
-                1,
-                "How many extra wolves should be given for the entree?");
-            extraGolds = Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
-                "How many extra golds for the entree?",
-                1,
-                "How many extra golds should be given for the entree?");
+            extraHares = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Hare", 2);
+            extraWolves = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Wolve", 1);
+            extraGolds = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Gold", 1);
             
             // Compatibility Sections
-            
-            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsPrefix))
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsGuid))
             {
-                Compat_Layer.Tribal_Pelts.CountConfigs.Config = Config;
-                Compat_Layer.Tribal_Pelts.CountConfigs.Init();
+                Compat_Layer.Tribal_Pelts.CountConfigsTribal.Config = Config;
+                Compat_Layer.Tribal_Pelts.CountConfigsTribal.Init();
+            }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TemplePeltsGuid))
+            {
+                Compat_Layer.Temple_Pelts.CountConfigsTemple.Config = Config;
+                Compat_Layer.Temple_Pelts.CountConfigsTemple.Init();
             }
         }
     }

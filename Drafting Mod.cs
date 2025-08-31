@@ -16,11 +16,12 @@ namespace DraftingMod
         public const string PluginVersion = "1.1.0";
         public const string PluginPrefix = "Drafting_Mod";
         
-        public const string TribalPeltsPrefix = "creator.TribalPelts";
-        public const string NGUID = "nevernamed.inscryption.sigils";
-        public const string VGUID = "extraVoid.inscryption.VerminTribe";
-        public const string LGUID = "Lily.BOT";
-        public const string MGUID = "mushroom.pelts";
+        public const string TribalPeltsGuid = "creator.TribalPelts";
+        public const string NevernamedsSigilariumGuid = "nevernamed.inscryption.sigils";
+        public const string VerminTribeGuid = "extraVoid.inscryption.VerminTribe";
+        public const string BundleOfTotemsGuid = "Lily.BOT";
+        public const string MushroomTribesGuid = "mushroom.pelts";
+        public const string TemplePeltsGuid = "creator.CostPelts";
 
         // Define a Manual Log Source
         public static ManualLogSource Log = new ManualLogSource(PluginName);

@@ -1,5 +1,5 @@
 ﻿using BepInEx.Configuration;
-using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
+using DraftingMod.Utility;
 
 namespace DraftingMod.Configuration
 {
@@ -8,30 +8,27 @@ namespace DraftingMod.Configuration
         public static ConfigFile Config;
         
         // Config Vars
-        public static ConfigEntry<string> extraHareChance;
-        public static ConfigEntry<string> extraWolveChance;
-        public static ConfigEntry<string> extraGoldChance;
+        public static ConfigEntry<string> extraHarePeltChance;
+        public static ConfigEntry<string> extraWolvePeltChance;
+        public static ConfigEntry<string> extraGoldPeltChance;
         
         public static void Init()
         {
             // Base
-            extraHareChance = Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
-                "What should the chances for each hare entree be?",
-                "30%, 10%",
-                "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
-            extraWolveChance = Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
-                "What should the chances for each wolve entree be?",
-                "20%",
-                "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
-            extraGoldChance = Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
-                "What should the chances for each gold entree be?",
-                "5%",
-                "Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");
+            extraHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Hare", "35%, 15%");
+            extraWolvePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wolve", "15%");
+            extraGoldPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Gold", "5%");
+            
             // Compatibility Sections
-            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsPrefix))
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsGuid))
             {
-                Compat_Layer.Tribal_Pelts.ChanceConfigs.Config = Config;
-                Compat_Layer.Tribal_Pelts.ChanceConfigs.Init();
+                Compat_Layer.Tribal_Pelts.ChanceConfigsTribal.Config = Config;
+                Compat_Layer.Tribal_Pelts.ChanceConfigsTribal.Init();
+            }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TemplePeltsGuid))
+            {
+                Compat_Layer.Temple_Pelts.ChanceConfigsTemple.Config = Config;
+                Compat_Layer.Temple_Pelts.ChanceConfigsTemple.Init();
             }
         }
     }
