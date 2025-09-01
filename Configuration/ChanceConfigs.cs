@@ -15,9 +15,9 @@ namespace DraftingMod.Configuration
         public static void Init()
         {
             // Base
-            extraHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Hare", "35%, 15%");
-            extraWolvePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wolve", "15%");
-            extraGoldPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Gold", "5%");
+            extraHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Hare", "35%, 15%", "Base Game - Chance");
+            extraWolvePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wolve", "15%", "Base Game - Chance");
+            extraGoldPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Gold", "5%", "Base Game - Chance");
             
             // Compatibility Sections
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsGuid))
@@ -29,6 +29,11 @@ namespace DraftingMod.Configuration
             {
                 Compat_Layer.Temple_Pelts.ChanceConfigsTemple.Config = Config;
                 Compat_Layer.Temple_Pelts.ChanceConfigsTemple.Init();
+            }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.MorePeltsGuid))
+            {
+                Compat_Layer.More_Pelts.ChanceConfigsMore.Config = Config;
+                Compat_Layer.More_Pelts.ChanceConfigsMore.Init();
             }
         }
     }

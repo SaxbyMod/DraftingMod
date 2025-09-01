@@ -11,8 +11,8 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		public static ConfigEntry<int> extraSpiders;
 		public static void NevernamedExtensionCount()
 		{
-			extraLobsters = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Lobster", 1);
-			extraSpiders = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Spider", 1);
+			extraLobsters = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Lobster", 1, "Compat - Tribal Pelts - Nevernameds Pelts - Count");
+			extraSpiders = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Spider", 1, "Compat - Tribal Pelts - Nevernameds Pelts - Count");
 		}
 		
 		public static ConfigEntry<string> extraLobsterPeltChance;
@@ -20,8 +20,8 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		
 		public static void NevernamedExtensionChance()
 		{
-			extraLobsterPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Lobster", "25%");
-			extraSpiderSkinChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Spider", "25%");
+			extraLobsterPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Lobster", "25%", "Compat - Tribal Pelts - Nevernameds Pelts - Chance");
+			extraSpiderSkinChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Spider", "25%", "Compat - Tribal Pelts - Nevernameds Pelts - Chance");
 		}
 	}
 }

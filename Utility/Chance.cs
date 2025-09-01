@@ -1,4 +1,5 @@
-﻿using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
+﻿using DraftingMod.Configuration.Compat_Layer.More_Pelts;
+using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
 using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions;
 using DraftingMod.Configuration.Compat_Layer.Temple_Pelts;
 using System.Collections.Generic;
@@ -13,20 +14,26 @@ namespace DraftingMod.Utility
         {
             string listStr = peltType switch
             {
+                // Base
                 "Hare" => Configuration.ChanceConfigs.extraHarePeltChance.Value,
                 "Wolve" => Configuration.ChanceConfigs.extraWolvePeltChance.Value,
                 "Gold" => Configuration.ChanceConfigs.extraGoldPeltChance.Value,
+                // Tribal
                 "Raven" => ChanceConfigsTribal.extraRavenEpidermisesChance.Value,
                 "Coyote" => ChanceConfigsTribal.extraCoyotePeltChance.Value,
                 "Moth" => ChanceConfigsTribal.extraMothMoltChance.Value,
                 "Deer" => ChanceConfigsTribal.extraDeerPeltChance.Value,
                 "Crocadile" => ChanceConfigsTribal.extraCrocadileHideChance.Value,
+                // Tribal - Overlap
                 "Beaver" => BeaverConfig.extraBeaverPeltChance.Value,
+                // Tribal - Nevernameds
                 "Lobster" => NevernamedConfig.extraLobsterPeltChance.Value,
                 "Spider" => NevernamedConfig.extraSpiderSkinChance.Value,
+                // Tribal - Bundles
                 "Human" => BundleConfig.extraHumanRemainsChance.Value,
                 "Shark" => BundleConfig.extraSharkLeatherChance.Value,
                 "Tiger" => BundleConfig.extraTigerPeltChance.Value,
+                // Tribal - Mushrooms
                 "Blaster" => MushroomConfig.extraBlasterPeltChance.Value,
                 "Block" => MushroomConfig.extraBlockPeltChance.Value,
                 "Blooper" => MushroomConfig.extraBlooperPeltChance.Value,
@@ -51,10 +58,28 @@ namespace DraftingMod.Utility
                 "Thwomp" => MushroomConfig.extraThwompPeltChance.Value,
                 "Waddlewing" => MushroomConfig.extraWaddlewingPeltChance.Value,
                 "Wiggler" => MushroomConfig.extraWigglerPeltChance.Value,
+                // Temple
                 "Blood" => ChanceConfigsTemple.extraBloodVialChance.Value,
                 "Bone" => ChanceConfigsTemple.extraBoneFossilChance.Value,
                 "Energy" => ChanceConfigsTemple.extraEnergyCapsuleChance.Value,
                 "Gem" => ChanceConfigsTemple.extraGemHolderChance.Value,
+                // More
+                "Air" => ChanceConfigsMore.extraAirPeltChance.Value,
+                "Battery" => ChanceConfigsMore.extraBatteryPeltChance.Value,
+                "Bear" => ChanceConfigsMore.extraBearPeltChance.Value,
+                "BeaverB" => ChanceConfigsMore.extraBeaverPeltChance.Value,
+                "BoneB" => ChanceConfigsMore.extraBonePeltChance.Value,
+                "Buffalo" => ChanceConfigsMore.extraBuffaloPeltChance.Value,
+                "Fish" => ChanceConfigsMore.extraFishPeltChance.Value,
+                "Gecko" => ChanceConfigsMore.extraGeckoPeltChance.Value,
+                "Light" => ChanceConfigsMore.extraLightPeltChance.Value,
+                "Mox" => ChanceConfigsMore.extraMoxPeltChance.Value,
+                "RHare" => ChanceConfigsMore.extraRHarePeltChance.Value,
+                "RWolve" => ChanceConfigsMore.extraRWolvePeltChance.Value,
+                "RGold" => ChanceConfigsMore.extraRGoldPeltChance.Value,
+                "SBattery" => ChanceConfigsMore.extraSBatteryPeltChance.Value,
+                "SHare" => ChanceConfigsMore.extraSHarePeltChance.Value,
+                "Wizard" => ChanceConfigsMore.extraWizardPeltChance.Value,
                 _ => "",
             };
 
@@ -63,8 +88,8 @@ namespace DraftingMod.Utility
             foreach (string percentage in newList)
             {
                 string newPercentage = percentage.Replace(" ", "").Replace("%", "");
-                int newNewPercentage = int.TryParse(newPercentage, out newNewPercentage) ? newNewPercentage : 0;
-                float percentageCast = (float)newNewPercentage / 100;
+                float newNewPercentage = float.TryParse(newPercentage, out newNewPercentage) ? newNewPercentage : 0;
+                float percentageCast = newNewPercentage / 100;
                 chances.Add(percentageCast);
             }
             return chances;
@@ -72,12 +97,13 @@ namespace DraftingMod.Utility
 
         public static bool chanceSuccessful(float percentage, string Type)
         {
+            Console.WriteLine("<color=yellow>I AM YELLOW TEXT</color>");
             float num = UnityEngine.Random.Range(0.00f, 1.00f);
-            Console.WriteLine($"Doing RNG for {Type}; The success Percentage given was {percentage}, the Rolled value is {num}.");
+            Console.WriteLine($"{ColorLists.UnderlineColorList[3]}Doing RNG for {ColorLists.ResetColor}{ColorLists.UnderlineColorList[6]}{Type}{ColorLists.ResetColor}{ColorLists.UnderlineColorList[3]}; The success Percentage given was {ColorLists.ResetColor}{ColorLists.UnderlineColorList[6]}{percentage}{ColorLists.ResetColor}{ColorLists.UnderlineColorList[3]}, the Rolled value is {ColorLists.ResetColor}{ColorLists.UnderlineColorList[6]}{num}{ColorLists.ResetColor}{ColorLists.UnderlineColorList[3]}.{ColorLists.ResetColor}");
             if (num <= percentage) {
-                Console.WriteLine("The Aforementioned roll has succeeded");
+                Console.WriteLine($"{ColorLists.FlashyColorList[2]}The Aforementioned roll has succeeded{ColorLists.ResetColor}");
             } else {
-                Console.WriteLine("The Aforementioned roll has failed");
+                Console.WriteLine($"{ColorLists.FlashyColorList[1]}The Aforementioned roll has failed{ColorLists.ResetColor}");
             }
             return num <= percentage;
         }

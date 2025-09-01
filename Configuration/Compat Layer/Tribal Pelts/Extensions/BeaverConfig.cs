@@ -11,14 +11,14 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		
 		public static void BeaverExtensionCount()
 		{
-			extraBeavers = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Beaver", 1);
+			extraBeavers = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Beaver", 1, "Compat - Tribal Pelts - Beaver Pelt - Count");
 		}
 		
 		public static ConfigEntry<string> extraBeaverPeltChance;
 		
 		public static void BeaverExtensionChance()
 		{
-			extraBeaverPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Beaver", "25%");
+			extraBeaverPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Beaver", "25%", "Compat - Tribal Pelts - Beaver Pelt - Chance");
 		}
 	}
 }

@@ -2,13 +2,17 @@ using BepInEx;
 using BepInEx.Logging;
 using DraftingMod.PATCHES;
 using DraftingMod.Configuration;
+using DraftingMod.Utility;
 using HarmonyLib;
+using System;
 
 namespace DraftingMod
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
     [BepInDependency("cyantist.inscryption.api")]
-    [BepInDependency("creator.TribalPelts", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(TribalPeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(TemplePeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(MorePeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
     public class DraftingMod : BaseUnityPlugin
     {
         public const string PluginGuid = "creator.inscryption.DraftingMod";
@@ -22,6 +26,7 @@ namespace DraftingMod
         public const string BundleOfTotemsGuid = "Lily.BOT";
         public const string MushroomTribesGuid = "mushroom.pelts";
         public const string TemplePeltsGuid = "creator.CostPelts";
+        public const string MorePeltsGuid = "jamesgames.inscryption.morepelts";
 
         // Define a Manual Log Source
         public static ManualLogSource Log = new ManualLogSource(PluginName);
@@ -41,7 +46,7 @@ namespace DraftingMod
             Harmony.PatchAll(typeof(MapGeneratorPatches));
             Harmony.PatchAll(typeof(AscensionSaveDataPatches));
             Harmony.PatchAll(typeof(AscensionStartScreenPatches));
-            Logger.LogMessage($"{PluginGuid}: Loaded Mod: {PluginName} - {PluginVersion}");
+            Logger.LogMessage($"{ColorLists.BoldColorList[2]}{PluginGuid}: Loaded Mod: {PluginName} - {PluginVersion}{ColorLists.ResetColor}");
         }
     }
 }

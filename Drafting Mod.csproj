@@ -43,7 +43,9 @@
 
 
 	<ItemGroup>
+	  <Folder Include="Configuration\Compat Layer\More Pelts\Extensions\" />
 	  <Folder Include="Configuration\Compat Layer\Temple Pelts\Extensions\" />
+	  <Folder Include="Utility\Compat Layer\More Pelts\Extensions\" />
 	  <Folder Include="Utility\Compat Layer\Temple Pelts\Extensions\" />
 	</ItemGroup>
 </Project>

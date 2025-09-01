@@ -13,9 +13,9 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		
 		public static void BundleExtensionCount()
 		{
-			extraHumans = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Human", 1);
-			extraSharks = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Shark", 1);
-			extraTigers = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Tiger", 1);
+			extraHumans = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Human", 1, "Compat - Tribal Pelts - Bundle Pelts - Count");
+			extraSharks = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Shark", 1, "Compat - Tribal Pelts - Bundle Pelts - Count");
+			extraTigers = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Tiger", 1, "Compat - Tribal Pelts - Bundle Pelts - Count");
 		}
 		
 		public static ConfigEntry<string> extraHumanRemainsChance;
@@ -24,9 +24,9 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 
 		public static void BundleExtensionChance()
 		{
-			extraHumanRemainsChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Human", "25%");
-			extraSharkLeatherChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shark", "25%");
-			extraTigerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Tiger", "25%");
+			extraHumanRemainsChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Human", "25%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
+			extraSharkLeatherChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shark", "25%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
+			extraTigerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Tiger", "25%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
 		}
 	}
 }

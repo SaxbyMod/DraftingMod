@@ -10,7 +10,7 @@ namespace DraftingMod.Utility
 		{
 			if (Chances.Count < COUNT.Value || Chances.Count > COUNT.Value || COUNT.Value > Chances.Count || COUNT.Value < Chances.Count)
 			{
-				DraftingMod.Log.LogError("Error; not enough or too many percentages provided for Golds");
+				DraftingMod.Log.LogError($"{ColorLists.HighlighterColorText[1]}Error; not enough or too many percentages provided for {cardName}{ColorLists.ResetColor}");
 			}
 			else
 			{
@@ -26,17 +26,17 @@ namespace DraftingMod.Utility
 			return deckInfo;
 		}
 		
-		public static ConfigEntry<int> GenerateXAdditionalCount(ConfigFile Config, string Type, int Default)
+		public static ConfigEntry<int> GenerateXAdditionalCount(ConfigFile Config, string Type, int Default, string Section)
 		{
-			return Config.Bind<int>(DraftingMod.PluginGuid + ".pelt.counts",
+			return Config.Bind<int>(Section,
 				$"How many extra {Type}s for the entree?",
 				Default,
 				$"How many extra {Type}s should be given for the entree?");
 		}
 		
-		public static ConfigEntry<string> GenerateXAdditionalChance(ConfigFile Config, string Type, string Default)
+		public static ConfigEntry<string> GenerateXAdditionalChance(ConfigFile Config, string Type, string Default, string Section)
 		{
-			return Config.Bind<string>(DraftingMod.PluginGuid + ".pelt.chances",
+			return Config.Bind<string>(Section,
 				$"What should the chances for each {Type} entree be?",
 				Default,
 				"Give me a list of percentages seperated by commas for each pelt asked for in the counts section. EX; If there were four write `30%, 20%, 10%, 5%` note it doesn't have to be these precisely but must be formatted as such.");

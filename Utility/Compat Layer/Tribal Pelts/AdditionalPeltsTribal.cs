@@ -24,22 +24,22 @@ namespace DraftingMod.Utility.Compat_Layer.Tribal_Pelts
             // Handle Tribal Pelts Extensions
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NevernamedsSigilariumGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.BundleOfTotemsGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.VerminTribeGuid))
             {
-	            Console.WriteLine("Do I see the extension enabled? I do, I do!! (Beaver Pelt)");
+	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Beaver Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
 	            deckInfo = BeaverUtil.BeaverExtension(deckInfo);
             }
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NevernamedsSigilariumGuid))
             {
-	            Console.WriteLine("Do I see the extension enabled? I do, I do!! (Nevernamed's Sigilarium Pelts)");
+	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Nevernamed's Sigilarium Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
 	            deckInfo = NevernamedUtil.NevernamedExtension(deckInfo);
             }
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.BundleOfTotemsGuid))
             {
-	            Console.WriteLine("Do I see the extension enabled? I do, I do!! (Bundle Of Totems Pelts)");
+	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Bundle Of Totems Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
 	            deckInfo = BundleUtil.BundleExtension(deckInfo);
             }
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.MushroomTribesGuid))
             {
-	            Console.WriteLine("Do I see the extension enabled? I do, I do!! (Bundle Of Totems Pelts)");
+	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Mushroom Tribes Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
 	            deckInfo = MushroomUtil.MushroomExtension(deckInfo);
             }
             

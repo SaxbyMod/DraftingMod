@@ -17,11 +17,11 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts
 		public static void Init()
 		{
 			// Handle Tribal Pelts -- Base
-			extraRavens = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Raven", 1);
-			extraCoyotes = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Coyote", 1);
-			extraMoths = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Moth", 1);
-			extraDeers = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Deer", 1);
-			extraCrocadiles = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Crocadile", 1);
+			extraRavens = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Raven", 1, "Compat - Tribal Pelts - Base - Count");
+			extraCoyotes = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Coyote", 1, "Compat - Tribal Pelts - Base - Count");
+			extraMoths = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Moth", 1, "Compat - Tribal Pelts - Base - Count");
+			extraDeers = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Deer", 1, "Compat - Tribal Pelts - Base - Count");
+			extraCrocadiles = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Crocadile", 1, "Compat - Tribal Pelts - Base - Count");
 			
 			// Handle Tribal Pelts Extensions
 			if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NevernamedsSigilariumGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.BundleOfTotemsGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.VerminTribeGuid))

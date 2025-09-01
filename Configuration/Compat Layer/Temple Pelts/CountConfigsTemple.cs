@@ -16,10 +16,10 @@ namespace DraftingMod.Configuration.Compat_Layer.Temple_Pelts
 		public static void Init()
 		{
 			// Base
-			extraBloods = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Blood", 1);
-			extraBones = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Bone", 1);
-			extraEnergys = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Energy", 1);
-			extraGems = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Gem", 1);
+			extraBloods = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Blood", 1, "Compat - Temple Pelts - Base - Count");
+			extraBones = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Bone", 1, "Compat - Temple Pelts - Base - Count");
+			extraEnergys = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Energy", 0, "Compat - Temple Pelts - Base - Count");
+			extraGems = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Gem", 0, "Compat - Temple Pelts - Base - Count");
             
 			// Compatibility Sections
 			if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsGuid))

@@ -15,9 +15,9 @@ namespace DraftingMod.Configuration
         public static void Init()
         {
             // Base
-            extraHares = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Hare", 2);
-            extraWolves = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Wolve", 1);
-            extraGolds = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Gold", 1);
+            extraHares = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Hare", 2, "Base Game - Count");
+            extraWolves = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Wolve", 1, "Base Game - Count");
+            extraGolds = AddXAdditionalLogic.GenerateXAdditionalCount(Config, "Gold", 1, "Base Game - Count");
             
             // Compatibility Sections
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.TribalPeltsGuid))
@@ -29,6 +29,11 @@ namespace DraftingMod.Configuration
             {
                 Compat_Layer.Temple_Pelts.CountConfigsTemple.Config = Config;
                 Compat_Layer.Temple_Pelts.CountConfigsTemple.Init();
+            }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.MorePeltsGuid))
+            {
+                Compat_Layer.More_Pelts.CountConfigsMore.Config = Config;
+                Compat_Layer.More_Pelts.CountConfigsMore.Init();
             }
         }
     }
