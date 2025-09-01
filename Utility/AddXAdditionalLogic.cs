@@ -1,4 +1,5 @@
-﻿using DiskCardGame;
+﻿using AnsiConsolePlugin.Util;
+using DiskCardGame;
 using BepInEx.Configuration;
 using System.Collections.Generic;
 
@@ -10,7 +11,7 @@ namespace DraftingMod.Utility
 		{
 			if (Chances.Count < COUNT.Value || Chances.Count > COUNT.Value || COUNT.Value > Chances.Count || COUNT.Value < Chances.Count)
 			{
-				DraftingMod.Log.LogError($"{ColorLists.HighlighterColorText[1]}Error; not enough or too many percentages provided for {cardName}{ColorLists.ResetColor}");
+				DraftingMod.Log.LogError($"{GetColorFromTypeFunctions.GetColorFromString("Red", "Highlighter")}Error; not enough or too many percentages provided for {cardName}{ANSICodeLists.ResetColor}");
 			}
 			else
 			{

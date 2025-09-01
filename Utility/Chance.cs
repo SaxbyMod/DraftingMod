@@ -5,6 +5,7 @@ using DraftingMod.Configuration.Compat_Layer.Temple_Pelts;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using AnsiConsolePlugin.Util;
 
 namespace DraftingMod.Utility
 {
@@ -97,13 +98,12 @@ namespace DraftingMod.Utility
 
         public static bool chanceSuccessful(float percentage, string Type)
         {
-            Console.WriteLine("<color=yellow>I AM YELLOW TEXT</color>");
             float num = UnityEngine.Random.Range(0.00f, 1.00f);
-            Console.WriteLine($"{ColorLists.UnderlineColorList[3]}Doing RNG for {ColorLists.ResetColor}{ColorLists.UnderlineColorList[6]}{Type}{ColorLists.ResetColor}{ColorLists.UnderlineColorList[3]}; The success Percentage given was {ColorLists.ResetColor}{ColorLists.UnderlineColorList[6]}{percentage}{ColorLists.ResetColor}{ColorLists.UnderlineColorList[3]}, the Rolled value is {ColorLists.ResetColor}{ColorLists.UnderlineColorList[6]}{num}{ColorLists.ResetColor}{ColorLists.UnderlineColorList[3]}.{ColorLists.ResetColor}");
+            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}Doing RNG for {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{Type}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}; The success Percentage given was {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{percentage}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}, the Rolled value is {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{num}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}.{ANSICodeLists.ResetColor}");
             if (num <= percentage) {
-                Console.WriteLine($"{ColorLists.FlashyColorList[2]}The Aforementioned roll has succeeded{ColorLists.ResetColor}");
+                Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Flashy")}The Aforementioned roll has succeeded{ANSICodeLists.ResetColor}");
             } else {
-                Console.WriteLine($"{ColorLists.FlashyColorList[1]}The Aforementioned roll has failed{ColorLists.ResetColor}");
+                Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Red", "Flashy")}The Aforementioned roll has failed{ANSICodeLists.ResetColor}");
             }
             return num <= percentage;
         }

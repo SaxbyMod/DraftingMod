@@ -1,3 +1,4 @@
+using AnsiConsolePlugin.Util;
 using BepInEx;
 using BepInEx.Logging;
 using DraftingMod.PATCHES;
@@ -46,7 +47,7 @@ namespace DraftingMod
             Harmony.PatchAll(typeof(MapGeneratorPatches));
             Harmony.PatchAll(typeof(AscensionSaveDataPatches));
             Harmony.PatchAll(typeof(AscensionStartScreenPatches));
-            Logger.LogMessage($"{ColorLists.BoldColorList[2]}{PluginGuid}: Loaded Mod: {PluginName} - {PluginVersion}{ColorLists.ResetColor}");
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}{PluginGuid}: Loaded Mod: {PluginName} - {PluginVersion}{ANSICodeLists.ResetColor}");
         }
     }
 }

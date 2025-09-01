@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using AnsiConsolePlugin.Util;
+using System.Collections.Generic;
 using DiskCardGame;
 using DraftingMod.Configuration.Compat_Layer.Tribal_Pelts;
 using DraftingMod.Utility.Compat_Layer.Tribal_Pelts.Extensions;
@@ -24,22 +25,22 @@ namespace DraftingMod.Utility.Compat_Layer.Tribal_Pelts
             // Handle Tribal Pelts Extensions
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NevernamedsSigilariumGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.BundleOfTotemsGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.VerminTribeGuid))
             {
-	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Beaver Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
+	            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}Do I see the extension enabled? I do, I do!! ({ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Magenta", "Italic")}Beaver Pelts{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}){ANSICodeLists.ResetColor}");
 	            deckInfo = BeaverUtil.BeaverExtension(deckInfo);
             }
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NevernamedsSigilariumGuid))
             {
-	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Nevernamed's Sigilarium Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
+	            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}Do I see the extension enabled? I do, I do!! ({ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Magenta", "Italic")}Nevernamed's Sigilarium Pelts{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}){ANSICodeLists.ResetColor}");
 	            deckInfo = NevernamedUtil.NevernamedExtension(deckInfo);
             }
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.BundleOfTotemsGuid))
             {
-	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Bundle Of Totems Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
+	            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}Do I see the extension enabled? I do, I do!! ({ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Magenta", "Italic")}Bundle Of Totems Pelts{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}){ANSICodeLists.ResetColor}");
 	            deckInfo = BundleUtil.BundleExtension(deckInfo);
             }
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.MushroomTribesGuid))
             {
-	            Console.WriteLine($"{ColorLists.BoldColorList[4]}Do I see the extension enabled? I do, I do!! ({ColorLists.ResetColor}{ColorLists.ItalicColorList[5]}Mushroom Tribes Pelts{ColorLists.ResetColor}{ColorLists.BoldColorList[4]}){ColorLists.ResetColor}");
+	            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}Do I see the extension enabled? I do, I do!! ({ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Magenta", "Italic")}Mushroom Tribes Pelts{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}){ANSICodeLists.ResetColor}");
 	            deckInfo = MushroomUtil.MushroomExtension(deckInfo);
             }
             
