@@ -1,7 +1,9 @@
-﻿using HarmonyLib;
+﻿using AnsiConsolePlugin.Util;
+using HarmonyLib;
 using DiskCardGame;
 using System.Collections.Generic;
 using DraftingMod.Utility;
+using System;
 
 namespace DraftingMod.PATCHES
 {
@@ -17,7 +19,8 @@ namespace DraftingMod.PATCHES
 	        __instance.currentRun.playerDeck.AddCard(CardLoader.GetCardByName("PeltHare"));
 	        __instance.currentRun.playerDeck.AddCard(CardLoader.GetCardByName("PeltHare"));
 	        
-	        AdditionalPelts.AddAdditionalPelts(__instance.currentRun.playerDeck);
+	        Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("White", "HighIntensityBold")}If for whatever the fuck reason the following appears twice, the LATTER section is what applies to the run, in present I have no clue how to resolve this.{ANSICodeLists.ResetColor}");
+	        __instance.currentRun.playerDeck = AdditionalPelts.AddAdditionalPelts(__instance.currentRun.playerDeck);
         }
     }
 }

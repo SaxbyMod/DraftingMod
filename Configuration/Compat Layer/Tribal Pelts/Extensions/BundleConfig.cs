@@ -24,9 +24,9 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 
 		public static void BundleExtensionChance()
 		{
-			extraHumanRemainsChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Human", "25%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
-			extraSharkLeatherChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shark", "25%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
-			extraTigerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Tiger", "25%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
+			extraHumanRemainsChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Human", "15%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
+			extraSharkLeatherChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shark", "15%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
+			extraTigerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Tiger", "15%", "Compat - Tribal Pelts - Bundle Pelts - Chance");
 		}
 	}
 }

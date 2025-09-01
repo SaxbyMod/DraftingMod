@@ -27,22 +27,22 @@ namespace DraftingMod.Configuration.Compat_Layer.More_Pelts
 
 		public static void Init()
 		{
-			extraAirPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Air", "15%", "Compat - More Pelts - Chance");
-			extraBatteryPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Battery", "20%", "Compat - More Pelts - Chance");
-			extraBearPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bear", "10%", "Compat - More Pelts - Chance");
-			extraBeaverPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Beaver", "2.5%", "Compat - More Pelts - Chance");
-			extraBonePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bone", "20%", "Compat - More Pelts - Chance");
-			extraBuffaloPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Buffalo", "5%", "Compat - More Pelts - Chance");
-			extraFishPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Fish", "15%", "Compat - More Pelts - Chance");
-			extraGeckoPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Gecko", "15%", "Compat - More Pelts - Chance");
-			extraLightPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Light", "0.01%", "Compat - More Pelts - Chance");
-			extraMoxPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Mox", "25%", "Compat - More Pelts - Chance");
-			extraRGoldPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Rotten Gold", "15%", "Compat - More Pelts - Chance");
-			extraRHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Rotten Hare", "45%, 25%, 5%, 0.25%", "Compat - More Pelts - Chance");
-			extraRWolvePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Rotten Wolve", "25%", "Compat - More Pelts - Chance");
-			extraSBatteryPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Super Battery", "0.05%", "Compat - More Pelts - Chance");
-			extraSHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Super Gold", "0.005%", "Compat - More Pelts - Chance");
-			extraWizardPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wizard", "20%", "Compat - More Pelts - Chance");
+			extraAirPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Air", "5%", "Compat - More Pelts - Chance");
+			extraBatteryPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Battery", "10%", "Compat - More Pelts - Chance");
+			extraBearPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bear", "1%", "Compat - More Pelts - Chance");
+			extraBeaverPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Beaver", "1.5%", "Compat - More Pelts - Chance");
+			extraBonePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bone", "10%", "Compat - More Pelts - Chance");
+			extraBuffaloPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Buffalo", "0.5%", "Compat - More Pelts - Chance");
+			extraFishPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Fish", "1.5%", "Compat - More Pelts - Chance");
+			extraGeckoPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Gecko", "1.5%", "Compat - More Pelts - Chance");
+			extraLightPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Light", "0.001%", "Compat - More Pelts - Chance");
+			extraMoxPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Mox", "15%", "Compat - More Pelts - Chance");
+			extraRGoldPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Rotten Gold", "1.5%", "Compat - More Pelts - Chance");
+			extraRHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Rotten Hare", "35%, 5%, 0.5%, 0.25%", "Compat - More Pelts - Chance");
+			extraRWolvePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Rotten Wolve", "15%", "Compat - More Pelts - Chance");
+			extraSBatteryPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Super Battery", "0.005%", "Compat - More Pelts - Chance");
+			extraSHarePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Super Gold", "0.0005%", "Compat - More Pelts - Chance");
+			extraWizardPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wizard", "10%", "Compat - More Pelts - Chance");
 		}
 	}
 }

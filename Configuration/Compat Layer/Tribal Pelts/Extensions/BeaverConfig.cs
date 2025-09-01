@@ -18,7 +18,7 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		
 		public static void BeaverExtensionChance()
 		{
-			extraBeaverPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Beaver", "25%", "Compat - Tribal Pelts - Beaver Pelt - Chance");
+			extraBeaverPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Beaver", "15%", "Compat - Tribal Pelts - Beaver Pelt - Chance");
 		}
 	}
 }

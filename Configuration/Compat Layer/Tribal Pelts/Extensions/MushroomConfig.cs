@@ -87,30 +87,30 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		
 		public static void MushroomExtensionChance()
 		{
-			extraBlasterPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Blaster", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraBlockPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Block", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraBlooperPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Blooper", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraBobOmbPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bob-Omb", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraBooPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Boo", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraChainChompPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Chain Chomp", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraCheepCheepPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Cheep Cheep", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraConkdorPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Conkdor", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraDragonPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Dragon", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraDryBonePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Dry Bone", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraGoombaPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Goomba", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraKoopaPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Koopa", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraPiranhaPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Piranha", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraPokeyPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Pokey", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraPowerUpPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Power Up", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraRamPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Ram", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraShroobPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shroob", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraShyGuyPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shy Guy", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraSpikePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Spike", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraStarPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Star", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraTanukiPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Tanuki", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraThwompPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Thwomp", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraWaddlewingPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Waddlewing", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
-			extraWigglerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wiggler", "25%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraBlasterPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Blaster", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraBlockPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Block", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraBlooperPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Blooper", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraBobOmbPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bob-Omb", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraBooPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Boo", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraChainChompPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Chain Chomp", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraCheepCheepPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Cheep Cheep", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraConkdorPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Conkdor", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraDragonPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Dragon", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraDryBonePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Dry Bone", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraGoombaPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Goomba", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraKoopaPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Koopa", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraPiranhaPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Piranha", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraPokeyPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Pokey", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraPowerUpPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Power Up", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraRamPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Ram", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraShroobPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shroob", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraShyGuyPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Shy Guy", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraSpikePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Spike", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraStarPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Star", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraTanukiPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Tanuki", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraThwompPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Thwomp", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraWaddlewingPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Waddlewing", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
+			extraWigglerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Wiggler", "15%", "Compat - Tribal Pelts - Mushroom Pelts - Chance");
 		}
 	}
 }

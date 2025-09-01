@@ -20,8 +20,8 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts.Extensions
 		
 		public static void NevernamedExtensionChance()
 		{
-			extraLobsterPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Lobster", "25%", "Compat - Tribal Pelts - Nevernameds Pelts - Chance");
-			extraSpiderSkinChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Spider", "25%", "Compat - Tribal Pelts - Nevernameds Pelts - Chance");
+			extraLobsterPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Lobster", "15%", "Compat - Tribal Pelts - Nevernameds Pelts - Chance");
+			extraSpiderSkinChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Spider", "15%", "Compat - Tribal Pelts - Nevernameds Pelts - Chance");
 		}
 	}
 }

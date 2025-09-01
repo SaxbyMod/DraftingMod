@@ -17,11 +17,11 @@ namespace DraftingMod.Configuration.Compat_Layer.Tribal_Pelts
 		public static void Init()
 		{
 			// Handle Tribal Pelts -- Base
-			extraRavenEpidermisesChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Raven", "25%", "Compat - Tribal Pelts - Base - Chance");
-			extraCoyotePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Coyote", "25%", "Compat - Tribal Pelts - Base - Chance");
-			extraMothMoltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Moth", "25%", "Compat - Tribal Pelts - Base - Chance");
-			extraDeerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Deer", "25%", "Compat - Tribal Pelts - Base - Chance");
-			extraCrocadileHideChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Crocadile", "25%", "Compat - Tribal Pelts - Base - Chance");
+			extraRavenEpidermisesChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Raven", "15%", "Compat - Tribal Pelts - Base - Chance");
+			extraCoyotePeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Coyote", "15%", "Compat - Tribal Pelts - Base - Chance");
+			extraMothMoltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Moth", "15%", "Compat - Tribal Pelts - Base - Chance");
+			extraDeerPeltChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Deer", "15%", "Compat - Tribal Pelts - Base - Chance");
+			extraCrocadileHideChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Crocadile", "15%", "Compat - Tribal Pelts - Base - Chance");
             
             // Handle Tribal Pelts Extensions
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.NevernamedsSigilariumGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.BundleOfTotemsGuid) || BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.VerminTribeGuid))

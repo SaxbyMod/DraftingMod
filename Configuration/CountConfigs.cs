@@ -35,6 +35,11 @@ namespace DraftingMod.Configuration
                 Compat_Layer.More_Pelts.CountConfigsMore.Config = Config;
                 Compat_Layer.More_Pelts.CountConfigsMore.Init();
             }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.PerkPeltsGuid))
+            {
+                Compat_Layer.Perk_Pelts.CountConfigsPerk.Config = Config;
+                Compat_Layer.Perk_Pelts.CountConfigsPerk.Init();
+            }
         }
     }
 }

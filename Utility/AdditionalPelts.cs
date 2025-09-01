@@ -34,6 +34,11 @@ namespace DraftingMod.Utility
 	            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}Do I see The other DLL? I do, I do see the other DLL! ({ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Magenta", "Italic")}More Pelts{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}){ANSICodeLists.ResetColor}");
 	            deckInfo = Compat_Layer.More_Pelts.AdditionalPeltsMore.MorePelts(deckInfo);
             }
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(DraftingMod.PerkPeltsGuid))
+            {
+	            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}Do I see The other DLL? I do, I do see the other DLL! ({ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Magenta", "Italic")}Perk Pelts{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Blue", "Bold")}){ANSICodeLists.ResetColor}");
+	            deckInfo = Compat_Layer.Perk_Pelts.AdditionalPeltsPerk.PerkPelts(deckInfo);
+            }
             
             return deckInfo;
 		}

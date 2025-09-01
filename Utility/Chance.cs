@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using AnsiConsolePlugin.Util;
+using DraftingMod.Configuration.Compat_Layer.Perk_Pelts;
 
 namespace DraftingMod.Utility
 {
@@ -81,6 +82,8 @@ namespace DraftingMod.Utility
                 "SBattery" => ChanceConfigsMore.extraSBatteryPeltChance.Value,
                 "SHare" => ChanceConfigsMore.extraSHarePeltChance.Value,
                 "Wizard" => ChanceConfigsMore.extraWizardPeltChance.Value,
+                "Rat" => ChanceConfigsPerk.extraPerkRatChance.Value,
+                "Tree" => ChanceConfigsPerk.extraPerkTreeChance.Value,
                 _ => "",
             };
 
@@ -99,7 +102,7 @@ namespace DraftingMod.Utility
         public static bool chanceSuccessful(float percentage, string Type)
         {
             float num = UnityEngine.Random.Range(0.00f, 1.00f);
-            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}Doing RNG for {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{Type}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}; The success Percentage given was {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{percentage}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}, the Rolled value is {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{num}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Green", "Underlined")}.{ANSICodeLists.ResetColor}");
+            Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Yellow", "Underlined")}Doing RNG for {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{Type}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Yellow", "Underlined")}; The success Percentage given was {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{percentage}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Yellow", "Underlined")}, the Rolled value is {ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Cyan", "Underlined")}{num}{ANSICodeLists.ResetColor}{GetColorFromTypeFunctions.GetColorFromString("Yellow", "Underlined")}.{ANSICodeLists.ResetColor}");
             if (num <= percentage) {
                 Console.WriteLine($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Flashy")}The Aforementioned roll has succeeded{ANSICodeLists.ResetColor}");
             } else {

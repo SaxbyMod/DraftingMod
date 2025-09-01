@@ -16,8 +16,8 @@ namespace DraftingMod.Configuration.Compat_Layer.Temple_Pelts
 		public static void Init()
 		{
 			// Base
-			extraBloodVialChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Blood", "20%", "Compat - Temple Pelts - Base - Chance");
-			extraBoneFossilChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bone", "20%", "Compat - Temple Pelts - Base - Chance");
+			extraBloodVialChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Blood", "10%", "Compat - Temple Pelts - Base - Chance");
+			extraBoneFossilChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Bone", "10%", "Compat - Temple Pelts - Base - Chance");
 			extraEnergyCapsuleChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Energy", "", "Compat - Temple Pelts - Base - Chance");
 			extraGemHolderChance = AddXAdditionalLogic.GenerateXAdditionalChance(Config, "Gem", "", "Compat - Temple Pelts - Base - Chance");
 		}

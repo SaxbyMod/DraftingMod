@@ -14,6 +14,7 @@ namespace DraftingMod
     [BepInDependency(TribalPeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(TemplePeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(MorePeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(PerkPeltsGuid, BepInDependency.DependencyFlags.SoftDependency)]
     public class DraftingMod : BaseUnityPlugin
     {
         public const string PluginGuid = "creator.inscryption.DraftingMod";
@@ -28,6 +29,8 @@ namespace DraftingMod
         public const string MushroomTribesGuid = "mushroom.pelts";
         public const string TemplePeltsGuid = "creator.CostPelts";
         public const string MorePeltsGuid = "jamesgames.inscryption.morepelts";
+        public const string PerkPeltsGuid = "Keks.Inscryption.PerkPelts";
+        public const string PerkPeltsPrefix = "PerkPelt";
 
         // Define a Manual Log Source
         public static ManualLogSource Log = new ManualLogSource(PluginName);
@@ -37,11 +40,17 @@ namespace DraftingMod
         
         public void Awake()
         {
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}Began loading for Drafting Mod.{ANSICodeLists.ResetColor}");
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}Once the config is created we reccomend you set the chances based on what you think its worth.{ANSICodeLists.ResetColor}");
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}Make sure the amount of pelts and percentages are equal otherwise the mod will bork.{ANSICodeLists.ResetColor}");
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}Currently loading version: {PluginVersion}{ANSICodeLists.ResetColor}");
+            
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}Creating the config...{ANSICodeLists.ResetColor}");
             CountConfigs.Config = Config;
             CountConfigs.Init();
             ChanceConfigs.Config = Config;
             ChanceConfigs.Init();
-            
+            Logger.LogMessage($"{GetColorFromTypeFunctions.GetColorFromString("Green", "Bold")}Patching...{ANSICodeLists.ResetColor}");
             Harmony.PatchAll(typeof(RunstatePatches));
             Harmony.PatchAll(typeof(DeckInfoPatches));
             Harmony.PatchAll(typeof(MapGeneratorPatches));
